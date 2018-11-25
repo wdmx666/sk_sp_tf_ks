@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession
 # Prepare training data from a list of (label, features) tuples.
 import os
 #os.environ["HADOOP_HOME"] = r"F:\environment\runtime\hadoop-2.7.1"
-spark = SparkSession.builder.master("local[3]").appName('abc').getOrCreate()
+spark = SparkSession.builder.master("local[*]").appName('abc').getOrCreate()
 
 training = spark.createDataFrame([
     (1.0, Vectors.dense([0.0, 1.1, 0.1])),
