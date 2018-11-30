@@ -1426,7 +1426,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/ExpandDims/dim"
+  name: "input_layer/petallength/ExpandDims/dim"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1456,10 +1456,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/ExpandDims"
+  name: "input_layer/petallength/ExpandDims"
   op: "ExpandDims"
   input: "IteratorGetNext"
-  input: "input_layer/PetalLength/ExpandDims/dim"
+  input: "input_layer/petallength/ExpandDims/dim"
   attr {
     key: "T"
     value {
@@ -1489,9 +1489,9 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/Shape"
+  name: "input_layer/petallength/Shape"
   op: "Shape"
-  input: "input_layer/PetalLength/ExpandDims"
+  input: "input_layer/petallength/ExpandDims"
   attr {
     key: "T"
     value {
@@ -1518,7 +1518,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/strided_slice/stack"
+  name: "input_layer/petallength/strided_slice/stack"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1554,7 +1554,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/strided_slice/stack_1"
+  name: "input_layer/petallength/strided_slice/stack_1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1590,7 +1590,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/strided_slice/stack_2"
+  name: "input_layer/petallength/strided_slice/stack_2"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1626,12 +1626,12 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/strided_slice"
+  name: "input_layer/petallength/strided_slice"
   op: "StridedSlice"
-  input: "input_layer/PetalLength/Shape"
-  input: "input_layer/PetalLength/strided_slice/stack"
-  input: "input_layer/PetalLength/strided_slice/stack_1"
-  input: "input_layer/PetalLength/strided_slice/stack_2"
+  input: "input_layer/petallength/Shape"
+  input: "input_layer/petallength/strided_slice/stack"
+  input: "input_layer/petallength/strided_slice/stack_1"
+  input: "input_layer/petallength/strided_slice/stack_2"
   attr {
     key: "Index"
     value {
@@ -1685,7 +1685,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/Reshape/shape/1"
+  name: "input_layer/petallength/Reshape/shape/1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1715,10 +1715,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/Reshape/shape"
+  name: "input_layer/petallength/Reshape/shape"
   op: "Pack"
-  input: "input_layer/PetalLength/strided_slice"
-  input: "input_layer/PetalLength/Reshape/shape/1"
+  input: "input_layer/petallength/strided_slice"
+  input: "input_layer/petallength/Reshape/shape/1"
   attr {
     key: "N"
     value {
@@ -1751,10 +1751,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalLength/Reshape"
+  name: "input_layer/petallength/Reshape"
   op: "Reshape"
-  input: "input_layer/PetalLength/ExpandDims"
-  input: "input_layer/PetalLength/Reshape/shape"
+  input: "input_layer/petallength/ExpandDims"
+  input: "input_layer/petallength/Reshape/shape"
   attr {
     key: "T"
     value {
@@ -1784,7 +1784,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/ExpandDims/dim"
+  name: "input_layer/petalwidth/ExpandDims/dim"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1814,10 +1814,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/ExpandDims"
+  name: "input_layer/petalwidth/ExpandDims"
   op: "ExpandDims"
   input: "IteratorGetNext:1"
-  input: "input_layer/PetalWidth/ExpandDims/dim"
+  input: "input_layer/petalwidth/ExpandDims/dim"
   attr {
     key: "T"
     value {
@@ -1847,9 +1847,9 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/Shape"
+  name: "input_layer/petalwidth/Shape"
   op: "Shape"
-  input: "input_layer/PetalWidth/ExpandDims"
+  input: "input_layer/petalwidth/ExpandDims"
   attr {
     key: "T"
     value {
@@ -1876,7 +1876,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/strided_slice/stack"
+  name: "input_layer/petalwidth/strided_slice/stack"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1912,7 +1912,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/strided_slice/stack_1"
+  name: "input_layer/petalwidth/strided_slice/stack_1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1948,7 +1948,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/strided_slice/stack_2"
+  name: "input_layer/petalwidth/strided_slice/stack_2"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -1984,12 +1984,12 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/strided_slice"
+  name: "input_layer/petalwidth/strided_slice"
   op: "StridedSlice"
-  input: "input_layer/PetalWidth/Shape"
-  input: "input_layer/PetalWidth/strided_slice/stack"
-  input: "input_layer/PetalWidth/strided_slice/stack_1"
-  input: "input_layer/PetalWidth/strided_slice/stack_2"
+  input: "input_layer/petalwidth/Shape"
+  input: "input_layer/petalwidth/strided_slice/stack"
+  input: "input_layer/petalwidth/strided_slice/stack_1"
+  input: "input_layer/petalwidth/strided_slice/stack_2"
   attr {
     key: "Index"
     value {
@@ -2043,7 +2043,7 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/Reshape/shape/1"
+  name: "input_layer/petalwidth/Reshape/shape/1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2073,10 +2073,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/Reshape/shape"
+  name: "input_layer/petalwidth/Reshape/shape"
   op: "Pack"
-  input: "input_layer/PetalWidth/strided_slice"
-  input: "input_layer/PetalWidth/Reshape/shape/1"
+  input: "input_layer/petalwidth/strided_slice"
+  input: "input_layer/petalwidth/Reshape/shape/1"
   attr {
     key: "N"
     value {
@@ -2109,10 +2109,10 @@ node {
   }
 }
 node {
-  name: "input_layer/PetalWidth/Reshape"
+  name: "input_layer/petalwidth/Reshape"
   op: "Reshape"
-  input: "input_layer/PetalWidth/ExpandDims"
-  input: "input_layer/PetalWidth/Reshape/shape"
+  input: "input_layer/petalwidth/ExpandDims"
+  input: "input_layer/petalwidth/Reshape/shape"
   attr {
     key: "T"
     value {
@@ -2142,7 +2142,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/ExpandDims/dim"
+  name: "input_layer/sepallength/ExpandDims/dim"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2172,10 +2172,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/ExpandDims"
+  name: "input_layer/sepallength/ExpandDims"
   op: "ExpandDims"
   input: "IteratorGetNext:2"
-  input: "input_layer/SepalLength/ExpandDims/dim"
+  input: "input_layer/sepallength/ExpandDims/dim"
   attr {
     key: "T"
     value {
@@ -2205,9 +2205,9 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/Shape"
+  name: "input_layer/sepallength/Shape"
   op: "Shape"
-  input: "input_layer/SepalLength/ExpandDims"
+  input: "input_layer/sepallength/ExpandDims"
   attr {
     key: "T"
     value {
@@ -2234,7 +2234,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/strided_slice/stack"
+  name: "input_layer/sepallength/strided_slice/stack"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2270,7 +2270,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/strided_slice/stack_1"
+  name: "input_layer/sepallength/strided_slice/stack_1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2306,7 +2306,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/strided_slice/stack_2"
+  name: "input_layer/sepallength/strided_slice/stack_2"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2342,12 +2342,12 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/strided_slice"
+  name: "input_layer/sepallength/strided_slice"
   op: "StridedSlice"
-  input: "input_layer/SepalLength/Shape"
-  input: "input_layer/SepalLength/strided_slice/stack"
-  input: "input_layer/SepalLength/strided_slice/stack_1"
-  input: "input_layer/SepalLength/strided_slice/stack_2"
+  input: "input_layer/sepallength/Shape"
+  input: "input_layer/sepallength/strided_slice/stack"
+  input: "input_layer/sepallength/strided_slice/stack_1"
+  input: "input_layer/sepallength/strided_slice/stack_2"
   attr {
     key: "Index"
     value {
@@ -2401,7 +2401,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/Reshape/shape/1"
+  name: "input_layer/sepallength/Reshape/shape/1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2431,10 +2431,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/Reshape/shape"
+  name: "input_layer/sepallength/Reshape/shape"
   op: "Pack"
-  input: "input_layer/SepalLength/strided_slice"
-  input: "input_layer/SepalLength/Reshape/shape/1"
+  input: "input_layer/sepallength/strided_slice"
+  input: "input_layer/sepallength/Reshape/shape/1"
   attr {
     key: "N"
     value {
@@ -2467,10 +2467,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalLength/Reshape"
+  name: "input_layer/sepallength/Reshape"
   op: "Reshape"
-  input: "input_layer/SepalLength/ExpandDims"
-  input: "input_layer/SepalLength/Reshape/shape"
+  input: "input_layer/sepallength/ExpandDims"
+  input: "input_layer/sepallength/Reshape/shape"
   attr {
     key: "T"
     value {
@@ -2500,7 +2500,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/ExpandDims/dim"
+  name: "input_layer/sepalwidth/ExpandDims/dim"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2530,10 +2530,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/ExpandDims"
+  name: "input_layer/sepalwidth/ExpandDims"
   op: "ExpandDims"
   input: "IteratorGetNext:3"
-  input: "input_layer/SepalWidth/ExpandDims/dim"
+  input: "input_layer/sepalwidth/ExpandDims/dim"
   attr {
     key: "T"
     value {
@@ -2563,9 +2563,9 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/Shape"
+  name: "input_layer/sepalwidth/Shape"
   op: "Shape"
-  input: "input_layer/SepalWidth/ExpandDims"
+  input: "input_layer/sepalwidth/ExpandDims"
   attr {
     key: "T"
     value {
@@ -2592,7 +2592,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/strided_slice/stack"
+  name: "input_layer/sepalwidth/strided_slice/stack"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2628,7 +2628,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/strided_slice/stack_1"
+  name: "input_layer/sepalwidth/strided_slice/stack_1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2664,7 +2664,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/strided_slice/stack_2"
+  name: "input_layer/sepalwidth/strided_slice/stack_2"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2700,12 +2700,12 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/strided_slice"
+  name: "input_layer/sepalwidth/strided_slice"
   op: "StridedSlice"
-  input: "input_layer/SepalWidth/Shape"
-  input: "input_layer/SepalWidth/strided_slice/stack"
-  input: "input_layer/SepalWidth/strided_slice/stack_1"
-  input: "input_layer/SepalWidth/strided_slice/stack_2"
+  input: "input_layer/sepalwidth/Shape"
+  input: "input_layer/sepalwidth/strided_slice/stack"
+  input: "input_layer/sepalwidth/strided_slice/stack_1"
+  input: "input_layer/sepalwidth/strided_slice/stack_2"
   attr {
     key: "Index"
     value {
@@ -2759,7 +2759,7 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/Reshape/shape/1"
+  name: "input_layer/sepalwidth/Reshape/shape/1"
   op: "Const"
   attr {
     key: "_output_shapes"
@@ -2789,10 +2789,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/Reshape/shape"
+  name: "input_layer/sepalwidth/Reshape/shape"
   op: "Pack"
-  input: "input_layer/SepalWidth/strided_slice"
-  input: "input_layer/SepalWidth/Reshape/shape/1"
+  input: "input_layer/sepalwidth/strided_slice"
+  input: "input_layer/sepalwidth/Reshape/shape/1"
   attr {
     key: "N"
     value {
@@ -2825,10 +2825,10 @@ node {
   }
 }
 node {
-  name: "input_layer/SepalWidth/Reshape"
+  name: "input_layer/sepalwidth/Reshape"
   op: "Reshape"
-  input: "input_layer/SepalWidth/ExpandDims"
-  input: "input_layer/SepalWidth/Reshape/shape"
+  input: "input_layer/sepalwidth/ExpandDims"
+  input: "input_layer/sepalwidth/Reshape/shape"
   attr {
     key: "T"
     value {
@@ -2890,10 +2890,10 @@ node {
 node {
   name: "input_layer/concat"
   op: "ConcatV2"
-  input: "input_layer/PetalLength/Reshape"
-  input: "input_layer/PetalWidth/Reshape"
-  input: "input_layer/SepalLength/Reshape"
-  input: "input_layer/SepalWidth/Reshape"
+  input: "input_layer/petallength/Reshape"
+  input: "input_layer/petalwidth/Reshape"
+  input: "input_layer/sepallength/Reshape"
+  input: "input_layer/sepalwidth/Reshape"
   input: "input_layer/concat/axis"
   attr {
     key: "N"
@@ -14856,7 +14856,7 @@ node {
         dtype: DT_STRING
         tensor_shape {
         }
-        string_val: "_temp_357aab7f76c144138d92655b5aa73c3f/part"
+        string_val: "_temp_fedfb04629b142beb8b828a05e5b5bb6/part"
       }
     }
   }
